@@ -35,6 +35,7 @@ ext {
 
     archVersion = '2.1.0' // https://developer.android.com/jetpack/androidx/releases/lifecycle#declaring_dependencies
     archLifecycleVersion = '2.2.0' // https://developer.android.com/jetpack/androidx/releases/lifecycle#declaring_dependencies
+    navigationVersion = '2.2.1' // https://developer.android.com/jetpack/androidx/releases/navigation
 
     // https://developer.android.com/training/testing/set-up-project
     androidXTestVersion = '1.2.0' // https://developer.android.com/jetpack/androidx/releases/test

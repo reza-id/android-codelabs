@@ -28,6 +28,11 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    // For Kotlin projects https://developer.android.com/studio/write/java8-support
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
 }
 
 dependencies {
@@ -39,6 +44,10 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     implementation "com.google.android.material:material:$materialVersion"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
