@@ -16,7 +16,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        bottom_nav_view?.setupWithNavController(findNavController(R.id.nav_host_fragment))
+        val navController = findNavController(R.id.nav_host_fragment)
+
+        nav_view?.setupWithNavController(navController)
+        bottom_nav_view?.setupWithNavController(navController)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
