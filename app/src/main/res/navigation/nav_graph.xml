@@ -64,4 +64,10 @@
         android:label="@string/settings"
         tools:layout="@layout/fragment_settings" />
 
+    <fragment
+        android:id="@+id/dest_favorite"
+        android:name="com.reza.codelabs.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite" />
+
 </navigation>

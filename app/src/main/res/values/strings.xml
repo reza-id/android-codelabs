@@ -4,6 +4,7 @@
     <!-- Menu strings -->
     <string name="home">Home</string>
     <string name="settings">Settings</string>
+    <string name="favorite">Favorite</string>
 
     <!-- Screen strings -->
     <string name="navigate_destination_button">Navigate to destination</string>
