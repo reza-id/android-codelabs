@@ -17,9 +17,9 @@
             android:icon="@drawable/ic_home"
             android:title="@string/home" />
         <item
-            android:id="@+id/dest_step_two"
+            android:id="@+id/dest_favorite"
             android:icon="@drawable/ic_android"
-            android:title="@string/step_two" />
+            android:title="@string/favorite" />
     </group>
 
     <item

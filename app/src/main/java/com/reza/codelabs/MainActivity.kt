@@ -19,9 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.nav_host_fragment)
 
-        // TODO: 9.5. add screen for top-level destination (to remove back button)
-        val topLevel = if (nav_view == null) setOf(R.id.dest_home, R.id.dest_settings) else setOf(R.id.dest_home)
-        appBarConfig = AppBarConfiguration(topLevel, drawer_layout)
+        appBarConfig = AppBarConfiguration(setOf(R.id.dest_home, R.id.dest_favorite), drawer_layout)
         setupActionBarWithNavController(navController, appBarConfig)
 
         nav_view?.setupWithNavController(navController)

@@ -16,7 +16,7 @@
         android:icon="@drawable/ic_home"
         android:title="@string/home" />
     <item
-        android:id="@+id/dest_step_three"
+        android:id="@+id/dest_favorite"
         android:icon="@drawable/ic_android"
-        android:title="@string/step_three" />
+        android:title="@string/favorite" />
 </menu>
