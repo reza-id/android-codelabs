@@ -10,4 +10,26 @@
         android:name="com.reza.codelabs.HomeFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/dest_step_one"
+        android:name="com.reza.codelabs.FlowStepFragment"
+        tools:layout="@layout/fragment_flow_step_one" />
+
+    <fragment
+        android:id="@+id/dest_step_two"
+        android:name="com.reza.codelabs.FlowStepFragment"
+        tools:layout="@layout/fragment_flow_step_two" />
+
+    <fragment
+        android:id="@+id/dest_step_three"
+        android:name="com.reza.codelabs.FlowStepFragment"
+        tools:layout="@layout/fragment_flow_step_three" />
+
+    <fragment
+        android:id="@+id/dest_settings"
+        android:name="com.reza.codelabs.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+
 </navigation>
