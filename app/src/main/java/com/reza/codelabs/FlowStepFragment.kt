@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.fragment_flow_step_one.*
 
 class FlowStepFragment : Fragment() {
@@ -15,7 +16,10 @@ class FlowStepFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        return when (arguments?.getInt("flowStepNumber")) {
+        // https://developer.android.com/guide/navigation/navigation-pass-data#Safe-args
+        val safeArgs: FlowStepFragmentArgs by navArgs()
+
+        return when (safeArgs.flowStepNumber) {
             3 -> inflater.inflate(R.layout.fragment_flow_step_three, container, false)
             2 -> inflater.inflate(R.layout.fragment_flow_step_two, container, false)
             else -> inflater.inflate(R.layout.fragment_flow_step_one, container, false)

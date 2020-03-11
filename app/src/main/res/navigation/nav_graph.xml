@@ -26,6 +26,10 @@
         <action
             android:id="@+id/action_step"
             app:destination="@id/dest_step_two" />
+        <argument
+            android:name="flowStepNumber"
+            android:defaultValue="1"
+            app:argType="integer" />
     </fragment>
 
     <fragment

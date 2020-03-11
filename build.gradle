@@ -2,6 +2,25 @@
 
 buildscript {
     ext.kotlin_version = '1.3.70'
+    ext {
+        //dependencies version
+        ktxCoreVersion = '1.2.0' // https://developer.android.com/kotlin/ktx https://developer.android.com/jetpack/androidx/releases/core
+        appCompatVersion = '1.1.0' // https://developer.android.com/jetpack/androidx/releases/appcompat
+        constraintLayoutVersion = '1.1.3' // https://developer.android.com/jetpack/androidx/releases/constraintlayout https://developer.android.com/training/constraint-layout
+        materialVersion = '1.1.0' // https://github.com/material-components/material-components-android/releases
+        recyclerViewVersion = '1.1.0' //https://developer.android.com/jetpack/androidx/releases/recyclerview
+        glideVersion = '4.11.0' // https://github.com/bumptech/glide/releases
+
+        archVersion = '2.1.0' // https://developer.android.com/jetpack/androidx/releases/lifecycle#declaring_dependencies
+        archLifecycleVersion = '2.2.0' // https://developer.android.com/jetpack/androidx/releases/lifecycle#declaring_dependencies
+        navigationVersion = '2.2.1' // https://developer.android.com/jetpack/androidx/releases/navigation
+
+        // https://developer.android.com/training/testing/set-up-project
+        androidXTestVersion = '1.2.0' // https://developer.android.com/jetpack/androidx/releases/test
+        mockitoVersion = '2.28.2' // https://mvnrepository.com/artifact/org.mockito/mockito-core
+        mockitoKotlinVersion = '2.2.0' // https://github.com/nhaarman/mockito-kotlin/releases
+        espressoVersion = '3.2.0'
+    }
     repositories {
         google()
         jcenter()
@@ -10,6 +29,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -22,26 +42,6 @@ allprojects {
         jcenter()
         
     }
-}
-
-ext {
-    //dependencies version
-    ktxCoreVersion = '1.2.0' // https://developer.android.com/kotlin/ktx https://developer.android.com/jetpack/androidx/releases/core
-    appCompatVersion = '1.1.0' // https://developer.android.com/jetpack/androidx/releases/appcompat
-    constraintLayoutVersion = '1.1.3' // https://developer.android.com/jetpack/androidx/releases/constraintlayout https://developer.android.com/training/constraint-layout
-    materialVersion = '1.1.0' // https://github.com/material-components/material-components-android/releases
-    recyclerViewVersion = '1.1.0' //https://developer.android.com/jetpack/androidx/releases/recyclerview
-    glideVersion = '4.11.0' // https://github.com/bumptech/glide/releases
-
-    archVersion = '2.1.0' // https://developer.android.com/jetpack/androidx/releases/lifecycle#declaring_dependencies
-    archLifecycleVersion = '2.2.0' // https://developer.android.com/jetpack/androidx/releases/lifecycle#declaring_dependencies
-    navigationVersion = '2.2.1' // https://developer.android.com/jetpack/androidx/releases/navigation
-
-    // https://developer.android.com/training/testing/set-up-project
-    androidXTestVersion = '1.2.0' // https://developer.android.com/jetpack/androidx/releases/test
-    mockitoVersion = '2.28.2' // https://mvnrepository.com/artifact/org.mockito/mockito-core
-    mockitoKotlinVersion = '2.2.0' // https://github.com/nhaarman/mockito-kotlin/releases
-    espressoVersion = '3.2.0'
 }
 
 task clean(type: Delete) {
