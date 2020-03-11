@@ -21,10 +21,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             }
         }
 
-        navigate_action_button.setOnClickListener {
+        navigate_destination_button.setOnClickListener {
             // findNavController().navigate(R.id.dest_step_one)
             findNavController().navigate(R.id.dest_step_one, null, options)
             // Navigation.createNavigateOnClickListener(R.id.dest_step_one, null)
+        }
+
+        navigate_action_button.setOnClickListener {
+            findNavController().navigate(R.id.action_next)
         }
     }
 }
