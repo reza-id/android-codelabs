@@ -10,7 +10,9 @@
     <TextView
         android:id="@+id/tv_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        tools:text="From Widget of Notification" />
 
     <EditText
         android:id="@+id/et_args"
