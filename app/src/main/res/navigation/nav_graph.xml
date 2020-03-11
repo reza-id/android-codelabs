@@ -78,6 +78,8 @@
         <argument
             android:name="myarg"
             android:defaultValue="Android!" />
+
+        <deepLink app:uri="www.example.com/{myarg}" />
     </fragment>
 
 </navigation>
