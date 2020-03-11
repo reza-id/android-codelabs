@@ -21,10 +21,10 @@
         app:layout_constraintVertical_bias="0.25" />
 
     <Button
-        android:id="@+id/bt_next"
+        android:id="@+id/bt_finish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/next_step_button"
+        android:text="@string/finish_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_text" />
 

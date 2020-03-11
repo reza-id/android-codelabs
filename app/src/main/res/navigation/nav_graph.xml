@@ -34,7 +34,7 @@
 
     <fragment
         android:id="@+id/dest_step_two"
-        android:name="com.reza.codelabs.FlowStepFragment"
+        android:name="com.reza.codelabs.FlowStepTwoFragment"
         tools:layout="@layout/fragment_flow_step_two">
         <argument
             android:name="flowStepNumber"
@@ -47,15 +47,16 @@
 
     <fragment
         android:id="@+id/dest_step_three"
-        android:name="com.reza.codelabs.FlowStepFragment"
+        android:name="com.reza.codelabs.FlowStepThreeFragment"
         tools:layout="@layout/fragment_flow_step_three">
         <argument
             android:name="flowStepNumber"
             android:defaultValue="3"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_finish"
+            app:popUpTo="@id/dest_home" />
     </fragment>
-    <!-- TODO: -->
-    <!-- app:popUpTo -->
 
     <fragment
         android:id="@+id/dest_settings"
