@@ -50,7 +50,7 @@
         android:name="com.reza.codelabs.FlowStepThreeFragment"
         tools:layout="@layout/fragment_flow_step_three">
         <argument
-            android:name="flowStepNumber"
+            android:name="score"
             android:defaultValue="3"
             app:argType="integer" />
         <action

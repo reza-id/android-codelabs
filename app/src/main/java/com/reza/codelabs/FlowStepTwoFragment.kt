@@ -10,6 +10,7 @@ class FlowStepTwoFragment : Fragment(R.layout.fragment_flow_step_two) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        bt_next.setOnClickListener { findNavController().navigate(R.id.action_step) }
+        val action = FlowStepTwoFragmentDirections.actionStep(98)
+        bt_next.setOnClickListener { findNavController().navigate(action) }
     }
 }
