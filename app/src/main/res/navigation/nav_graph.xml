@@ -70,4 +70,14 @@
         android:label="Favorite"
         tools:layout="@layout/fragment_favorite" />
 
+    <fragment
+        android:id="@+id/dest_deeplink"
+        android:name="com.reza.codelabs.DeeplinkFragment"
+        android:label="@string/deeplink"
+        tools:layout="@layout/fragment_deeplink">
+        <argument
+            android:name="myarg"
+            android:defaultValue="Android!" />
+    </fragment>
+
 </navigation>
