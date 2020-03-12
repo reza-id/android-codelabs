@@ -19,7 +19,14 @@
         android:id="@+id/dest_game"
         android:name="com.reza.codelabs.GameFragment"
         android:label="GameFragment"
-        tools:layout="@layout/fragment_game" />
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_dest_game_to_gameWonFragment"
+            app:destination="@id/gameWonFragment" />
+        <action
+            android:id="@+id/action_dest_game_to_gameOverFragment"
+            app:destination="@id/gameOverFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/gameWonFragment"
@@ -28,7 +35,7 @@
         tools:layout="@layout/fragment_game_won" />
 
     <fragment
-        android:id="@+id/gameOverFragment2"
+        android:id="@+id/gameOverFragment"
         android:name="com.reza.codelabs.GameOverFragment"
         android:label="fragment_game_over"
         tools:layout="@layout/fragment_game_over" />
