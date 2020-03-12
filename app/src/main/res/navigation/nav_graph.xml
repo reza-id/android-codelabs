@@ -9,14 +9,27 @@
         android:id="@+id/dest_title"
         android:name="com.reza.codelabs.TitleFragment"
         android:label="fragment_title"
-        tools:layout="@layout/fragment_title" >
+        tools:layout="@layout/fragment_title">
         <action
             android:id="@+id/action_titleFragment_to_gameFragment"
             app:destination="@id/dest_game" />
     </fragment>
+
     <fragment
         android:id="@+id/dest_game"
         android:name="com.reza.codelabs.GameFragment"
         android:label="GameFragment"
         tools:layout="@layout/fragment_game" />
+
+    <fragment
+        android:id="@+id/gameWonFragment"
+        android:name="com.reza.codelabs.GameWonFragment"
+        android:label="fragment_game_won"
+        tools:layout="@layout/fragment_game_won" />
+
+    <fragment
+        android:id="@+id/gameOverFragment2"
+        android:name="com.reza.codelabs.GameOverFragment"
+        android:label="fragment_game_over"
+        tools:layout="@layout/fragment_game_over" />
 </navigation>
