@@ -59,4 +59,10 @@
         android:name="com.reza.codelabs.AboutFragment"
         android:label="About Trivia"
         tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.reza.codelabs.RulesFragment"
+        android:label="Trivia Rules"
+        tools:layout="@layout/fragment_rules" />
 </navigation>
