@@ -27,8 +27,4 @@ class MainActivity : AppCompatActivity() {
         @Suppress("UNUSED_VARIABLE")
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
     }
-
-    // TODO (03) Use DataBindingUtil.inflate to inflate and return the titleFragment in onCreateView
-    // In our new TitleFragment
-    // R.layout.fragment_title
 }
