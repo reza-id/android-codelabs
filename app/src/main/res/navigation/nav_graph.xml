@@ -19,13 +19,17 @@
         android:id="@+id/dest_game"
         android:name="com.reza.codelabs.GameFragment"
         android:label="GameFragment"
-        tools:layout="@layout/fragment_game" >
+        tools:layout="@layout/fragment_game">
         <action
             android:id="@+id/action_dest_game_to_gameWonFragment"
-            app:destination="@id/gameWonFragment" />
+            app:destination="@id/gameWonFragment"
+            app:popUpTo="@id/dest_game"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_dest_game_to_gameOverFragment"
-            app:destination="@id/gameOverFragment" />
+            app:destination="@id/gameOverFragment"
+            app:popUpTo="@id/dest_game"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
