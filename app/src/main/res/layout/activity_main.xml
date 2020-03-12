@@ -23,7 +23,7 @@
 
         <fragment
             android:id="@+id/titleFragment"
-            android:name="com.reza.codelabs.BlankFragment"
+            android:name="com.reza.codelabs.TitleFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>

@@ -11,7 +11,7 @@ import com.reza.codelabs.databinding.FragmentTitleBinding
 /**
  * A simple [Fragment] subclass.
  */
-class BlankFragment : Fragment() {
+class TitleFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
