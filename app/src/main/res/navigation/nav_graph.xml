@@ -9,7 +9,11 @@
         android:id="@+id/dest_title"
         android:name="com.reza.codelabs.TitleFragment"
         android:label="fragment_title"
-        tools:layout="@layout/fragment_title" />
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/dest_game" />
+    </fragment>
     <fragment
         android:id="@+id/dest_game"
         android:name="com.reza.codelabs.GameFragment"
