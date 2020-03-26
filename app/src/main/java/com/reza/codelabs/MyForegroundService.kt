@@ -2,10 +2,8 @@ package com.reza.codelabs
 
 import android.app.PendingIntent
 import android.app.Service
-import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -14,41 +12,27 @@ const val ACTION_SCHEDULE = "com.telkom.traceandcare.ACTION_SCHEDULE"
 
 class MyForegroundService : Service() {
 
-    override fun onCreate() {
-        super.onCreate()
-        val filter = IntentFilter(ACTION_SCHEDULE)
-        registerReceiver(receiver, filter)
-    }
-
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
 
         val notificationIntent = Intent(this, MainActivity::class.java)
         val pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0)
 
-        val notification = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setContentTitle("Selamat! Anda sedang ikut berkontribusi!")
-            .setContentText("Restart handphone Anda jika notifikasi ini menghilang.")
-            .setSmallIcon(R.drawable.ic_stars)
-            .setContentIntent(pendingIntent)
-            .build()
+        if (intent?.action == ACTION_SCHEDULE) {
+            pendingIntentNotification(this)
+        } else {
+            val notification = NotificationCompat.Builder(this, CHANNEL_ID)
+                .setContentTitle("Selamat! Anda sedang ikut berkontribusi!")
+                .setContentText("Restart handphone Anda jika notifikasi ini menghilang.")
+                .setSmallIcon(R.drawable.ic_stars)
+                .setContentIntent(pendingIntent)
+                .build()
 
-        startForeground(NOTIFICATION_ID, notification)
+            startForeground(NOTIFICATION_ID, notification)
+        }
 
         // TODO: doing some work here in the background
 
         return START_STICKY
-    }
-
-
-    private val receiver = object : BroadcastReceiver() {
-
-        override fun onReceive(context: Context, intent: Intent) {
-            when (intent.action) {
-                ACTION_SCHEDULE -> {
-                    pendingIntentNotification(context)
-                }
-            }
-        }
     }
 
     private fun pendingIntentNotification(context: Context) {
@@ -71,11 +55,5 @@ class MyForegroundService : Service() {
     }
 
     override fun onBind(intent: Intent?): IBinder? = null
-
-    override fun onDestroy() {
-        unregisterReceiver(receiver)
-        super.onDestroy()
-    }
-
 
 }
