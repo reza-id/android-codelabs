@@ -5,6 +5,7 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -63,6 +64,17 @@ class MainActivity : AppCompatActivity() {
             }
 
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
+        }
+
+        bt_startService.setOnClickListener { startService() }
+    }
+
+    private fun startService() {
+        val serviceIntent = Intent(this, MyForegroundService::class.java)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(serviceIntent)
+        } else {
+            startService(serviceIntent)
         }
     }
 }

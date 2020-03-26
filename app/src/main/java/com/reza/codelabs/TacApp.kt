@@ -6,7 +6,7 @@ import android.app.NotificationManager
 import android.os.Build
 
 const val CHANNEL_ID = "TraceAndCareChannel"
-const val NOTIFICATION_ID = 0
+const val NOTIFICATION_ID = 1
 
 class TacApp : Application() {
 
