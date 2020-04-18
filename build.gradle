@@ -31,10 +31,15 @@ ext {
     constraintLayoutVersion = '1.1.3' // https://developer.android.com/jetpack/androidx/releases/constraintlayout https://developer.android.com/training/constraint-layout
     materialVersion = '1.1.0' // https://github.com/material-components/material-components-android/releases
     recyclerViewVersion = '1.1.0' //https://developer.android.com/jetpack/androidx/releases/recyclerview
-    glideVersion = '4.11.0' // https://github.com/bumptech/glide/releases
+    cardViewVersion = '1.0.0' //https://developer.android.com/jetpack/androidx/releases/cardview
 
     archVersion = '2.1.0' // https://developer.android.com/jetpack/androidx/releases/lifecycle#declaring_dependencies
     archLifecycleVersion = '2.2.0' // https://developer.android.com/jetpack/androidx/releases/lifecycle#declaring_dependencies
+    pagingVersion = '2.1.2' // https://developer.android.com/topic/libraries/architecture/paging
+
+    gsonVersion = '2.8.6' // https://github.com/google/gson/releases
+    glideVersion = '4.11.0' // https://github.com/bumptech/glide/releases
+    retrofitVersion = '2.8.1' // https://github.com/square/retrofit/releases
 
     // https://developer.android.com/training/testing/set-up-project
     androidXTestVersion = '1.2.0' // https://developer.android.com/jetpack/androidx/releases/test
