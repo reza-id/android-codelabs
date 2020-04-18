@@ -8,6 +8,10 @@
         <variable
             name="student"
             type="com.reza.codelabs.Student" />
+
+        <variable
+            name="clickHandler"
+            type="com.reza.codelabs.MainActivity.MainActivityClickHandler" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,8 +23,8 @@
             android:id="@+id/tvStudentEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:text="@{student.email}"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -33,6 +37,26 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvStudentEmail" />
+
+        <Button
+            android:id="@+id/btEnroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{clickHandler::onEnrollButtonClicked}"
+            android:text="Enroll"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStudentName" />
+
+        <Button
+            android:id="@+id/btCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{clickHandler::onCancelButtonClicked}"
+            android:text="Cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btEnroll" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
