@@ -11,6 +11,10 @@
             type="com.reza.codelabs.Student" />
 
         <variable
+            name="contact"
+            type="com.reza.codelabs.Contact" />
+
+        <variable
             name="clickHandler"
             type="com.reza.codelabs.MainActivity.MainActivityClickHandler" />
     </data>
@@ -39,6 +43,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvStudentEmail" />
 
+        <EditText
+            android:id="@+id/etContactName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@{contact.name}"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/tvStudentName" />
+
+        <EditText
+            android:id="@+id/etContactPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@{contact.phone}"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/etContactName" />
+
         <Button
             android:id="@+id/btEnroll"
             android:layout_width="wrap_content"
@@ -47,7 +71,7 @@
             android:text="Enroll"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvStudentName" />
+            app:layout_constraintTop_toBottomOf="@id/etContactPhone" />
 
         <Button
             android:id="@+id/btCancel"

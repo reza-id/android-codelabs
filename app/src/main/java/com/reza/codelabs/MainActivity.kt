@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
 
         handler = MainActivityClickHandler(this)
         binding.clickHandler = handler
+
+        binding.contact = Contact(8, "Reza Agustiana", "+6281515888872")
     }
 
     inner class MainActivityClickHandler(val context: Context) {
