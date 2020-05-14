@@ -16,7 +16,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.reza.codelabs.R
 import com.reza.codelabs.receiver.AlarmReceiver
-import com.reza.codelabs.utils.sendNotification
+import com.reza.codelabs.utils.cancelNotifications
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -112,8 +112,12 @@ class EggTimerViewModel(private val app: Application) : AndroidViewModel(app) {
                 val triggerTime = SystemClock.elapsedRealtime() + selectedInterval
 
                 // TODO: Step 1.5 get an instance of NotificationManager and call sendNotification
+//                val notificationManager = ContextCompat.getSystemService(app, NotificationManager::class.java) as NotificationManager
+//                notificationManager.sendNotification(app.getString(R.string.timer_running), app)
+
+                // TODO: Step 1.15 call cancel notification
                 val notificationManager = ContextCompat.getSystemService(app, NotificationManager::class.java) as NotificationManager
-                notificationManager.sendNotification(app.getString(R.string.timer_running), app)
+                notificationManager.cancelNotifications()
 
                 AlarmManagerCompat.setExactAndAllowWhileIdle(
                     alarmManager,

@@ -47,3 +47,12 @@ fun NotificationManager.sendNotification(messageBody: String, context: Context) 
     // TODO: Step 1.4 call notify
     notify(NOTIFICATION_ID, builder.build())
 }
+
+// TODO: Step 1.14 Cancel all notifications
+/**
+ * Cancels all notifications.
+ *
+ */
+fun NotificationManager.cancelNotifications() {
+    cancelAll()
+}
