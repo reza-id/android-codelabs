@@ -34,6 +34,11 @@ android {
         jvmTarget = "1.8"
     }
 
+    // Enables data binding.
+    dataBinding {
+        enabled = true
+    }
+
 }
 
 dependencies {
@@ -44,6 +49,9 @@ dependencies {
     // UI
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$archLifecycleVersion"
 
     // firebase
     // https://firebase.google.com/docs/android/setup#kotlin+ktx
