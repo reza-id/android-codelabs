@@ -45,7 +45,8 @@ class EggTimerFragment : Fragment() {
             val notificationChannel = NotificationChannel(
                 channelId,
                 channelName,
-                NotificationManager.IMPORTANCE_LOW
+                // TODO: Step 2.4 change importance
+                NotificationManager.IMPORTANCE_HIGH
             )
 
             notificationChannel.enableLights(true)
