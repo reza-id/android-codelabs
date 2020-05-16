@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory
 import androidx.core.app.NotificationCompat
 import com.reza.codelabs.MainActivity
 import com.reza.codelabs.R
+import com.reza.codelabs.receiver.SnoozeReceiver
 
 // Notification ID.
 private const val NOTIFICATION_ID = 0
@@ -39,6 +40,10 @@ fun NotificationManager.sendNotification(messageBody: String, context: Context) 
         .bigPicture(eggImage)
         .bigLargeIcon(null)
 
+    // TODO: Step 2.2 add snooze action
+    val snoozeIntent = Intent(context, SnoozeReceiver::class.java)
+    val snoozePendingIntent: PendingIntent = PendingIntent.getBroadcast(context, REQUEST_CODE, snoozeIntent, FLAGS)
+
     // TODO: Step 1.2 get an instance of NotificationCompat.Builder
     val builder = NotificationCompat.Builder(context, context.getString(R.string.egg_notification_channel_id))
         // TODO: Step 1.8 verify the notification channel name
@@ -53,6 +58,8 @@ fun NotificationManager.sendNotification(messageBody: String, context: Context) 
         // TODO: Step 2.1 add style to builder (RUN)
         .setStyle(bigPicStyle)
         .setLargeIcon(eggImage)
+        // TODO: Step 2.3 add snooze action
+        .addAction(R.drawable.egg_icon, context.getString(R.string.snooze), snoozePendingIntent)
 
     // TODO: Step 1.4 call notify
     notify(NOTIFICATION_ID, builder.build())
