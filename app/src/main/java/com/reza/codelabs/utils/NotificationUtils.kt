@@ -4,6 +4,7 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.graphics.BitmapFactory
 import androidx.core.app.NotificationCompat
 import com.reza.codelabs.MainActivity
 import com.reza.codelabs.R
@@ -32,6 +33,12 @@ fun NotificationManager.sendNotification(messageBody: String, context: Context) 
         PendingIntent.FLAG_UPDATE_CURRENT
     )
 
+    // TODO: Step 2.0 add style
+    val eggImage = BitmapFactory.decodeResource(context.resources, R.drawable.cooked_egg)
+    val bigPicStyle = NotificationCompat.BigPictureStyle()
+        .bigPicture(eggImage)
+        .bigLargeIcon(null)
+
     // TODO: Step 1.2 get an instance of NotificationCompat.Builder
     val builder = NotificationCompat.Builder(context, context.getString(R.string.egg_notification_channel_id))
         // TODO: Step 1.8 verify the notification channel name
@@ -43,6 +50,9 @@ fun NotificationManager.sendNotification(messageBody: String, context: Context) 
         // TODO: Step 1.13 set content intent
         .setContentIntent(contentPendingIntent)
         .setAutoCancel(true)
+        // TODO: Step 2.1 add style to builder (RUN)
+        .setStyle(bigPicStyle)
+        .setLargeIcon(eggImage)
 
     // TODO: Step 1.4 call notify
     notify(NOTIFICATION_ID, builder.build())
